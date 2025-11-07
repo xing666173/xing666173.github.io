@@ -228,6 +228,41 @@
             font-size: 0.9rem;
         }
         
+        /* 访问统计样式 */
+        .visit-stats {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        
         /* 页脚样式 */
         footer {
             background-color: var(--primary-color);
@@ -267,6 +302,14 @@
                 justify-content: flex-start;
                 overflow-x: auto;
                 padding-bottom: 10px;
+            }
+            
+            .stats-container {
+                gap: 20px;
+            }
+            
+            .stat-value {
+                font-size: 1.5rem;
             }
         }
         
@@ -319,6 +362,20 @@
                 <!-- 卡片将通过JavaScript动态生成 -->
             </div>
         </section>
+        
+        <!-- 访问统计 -->
+        <section class="visit-stats">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-value" id="total-visits">0</div>
+                    <div class="stat-label">总访问量</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="unique-visitors">0</div>
+                    <div class="stat-label">访客数</div>
+                </div>
+            </div>
+        </section>
     </main>
     
     <!-- 页脚 -->
@@ -335,6 +392,39 @@
     </footer>
     
     <script>
+        // 访问统计功能
+        function updateVisitStats() {
+            // 从localStorage获取统计数据
+            let stats = JSON.parse(localStorage.getItem('visitStats')) || {
+                totalVisits: 0,
+                uniqueVisitors: 0,
+                visitorIds: []
+            };
+            
+            // 生成或获取访客ID
+            let visitorId = localStorage.getItem('visitorId');
+            if (!visitorId) {
+                visitorId = 'visitor_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+                localStorage.setItem('visitorId', visitorId);
+                
+                // 如果是新访客，增加访客数
+                if (!stats.visitorIds.includes(visitorId)) {
+                    stats.visitorIds.push(visitorId);
+                    stats.uniqueVisitors = stats.visitorIds.length;
+                }
+            }
+            
+            // 增加总访问量
+            stats.totalVisits++;
+            
+            // 保存更新后的统计数据
+            localStorage.setItem('visitStats', JSON.stringify(stats));
+            
+            // 更新页面显示
+            document.getElementById('total-visits').textContent = stats.totalVisits.toLocaleString();
+            document.getElementById('unique-visitors').textContent = stats.uniqueVisitors.toLocaleString();
+        }
+        
         // 网址数据
         const websites = [
             {
@@ -530,6 +620,9 @@
             const cardsContainer = document.getElementById('cards-container');
             const categoryTabs = document.querySelectorAll('.category-tab');
             const searchBox = document.querySelector('.search-box');
+            
+            // 更新访问统计
+            updateVisitStats();
             
             // 渲染卡片
             function renderCards(filteredWebsites = websites) {
