@@ -2,695 +2,820 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>东大集电常用网址导航</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="东南大学集成电路学院常用网址导航">
+    <meta name="theme-color" content="#001a3a">
+    <title>东大集电 · 常用导航</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('seuNavTheme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
+        /* ===== Reset & 严格变量管理 ===== */
+        *, *::before, *::after {
+            margin: 0; padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
         }
-        
+
         :root {
-            --primary-color: #0055a2;
-            --secondary-color: #8b0000;
-            --accent-color: #f5a623;
-            --light-bg: #f8f9fa;
-            --dark-text: #333333;
-            --light-text: #ffffff;
-            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            --hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            /* 主题色阶 (Light Mode Default) */
+            --blue-900: #001a3a;
+            --blue-800: #002856;
+            --blue-700: #003d7a;
+            --blue-600: #0055a2;
+            --blue-500: #1a6fbf;
+            --blue-100: #dceeff;
+            --blue-50:  #f0f7ff;
+
+            --gold:    #e8a922;
+            --gold-lt: #ffd166;
+            --red-alert: #d32f2f;
+
+            /* 背景与文本中性色 (Light) */
+            --bg-body: #f9fafb;
+            --bg-card: #ffffff;
+            --bg-nav: rgba(255,255,255,0.9);
+            --bg-tab: #f3f4f6;
+            --border-card: #e5e7eb;
+            --border-divider: #f3f4f6;
+            
+            --text-main: #111827;
+            --text-heading: #1f2937;
+            --text-desc: #374151;
+            --text-muted: #6b7280;
+
+            /* 阴影规范 */
+            --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+            --shadow-md: 0 4px 16px rgba(0,0,0,.10);
+            --shadow-lg: 0 12px 32px rgba(0,0,0,.14);
+            /* 悬浮微光阴影 */
+            --shadow-glow: 0 12px 32px rgba(0, 85, 162, 0.15); 
+
+            /* 统一圆角与动画 */
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-pill: 50px;
+            --speed: .3s;
+            --ease: cubic-bezier(.4,0,.2,1);
         }
-        
+
+        /* ===== Dark Mode 重写 ===== */
+        [data-theme="dark"] {
+            --blue-600: #3d8fd6; /* 暗模式下调亮主色以增加对比度 */
+            --blue-50:  #1e3a5f;
+            
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --bg-nav: rgba(15, 23, 42, 0.9);
+            --bg-tab: #334155;
+            --border-card: #334155;
+            --border-divider: #334155;
+            
+            --text-main: #f8fafc;
+            --text-heading: #f1f5f9;
+            --text-desc: #cbd5e1;
+            --text-muted: #94a3b8;
+
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+            --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.8);
+            --shadow-glow: 0 12px 32px rgba(61, 143, 214, 0.2); /* 暗黑模式悬浮微光 */
+        }
+
+        html { scroll-behavior: smooth; }
+
         body {
-            background-color: var(--light-bg);
-            color: var(--dark-text);
+            font-family: 'Noto Sans SC', -apple-system, sans-serif;
+            background: var(--bg-body);
+            color: var(--text-main);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            transition: background var(--speed) var(--ease), color var(--speed) var(--ease);
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ===== 优化的定制滚动条 ===== */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--gray-400); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gray-700); }
+        [data-theme="dark"] ::-webkit-scrollbar-thumb { background: var(--gray-700); }
+        [data-theme="dark"] ::-webkit-scrollbar-thumb:hover { background: var(--gray-400); }
+
+        /* 全局焦点无障碍轮廓 (A11y) */
+        :focus:not(:focus-visible) { outline: none; }
+        :focus-visible {
+            outline: 2px solid var(--gold);
+            outline-offset: 2px;
+            border-radius: 4px;
         }
-        
-        /* 头部样式 */
+
+        /* ===== 顶部阅读进度条 ===== */
+        #progress-bar {
+            position: fixed; top: 0; left: 0; height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--blue-600));
+            width: 0%; z-index: 9999;
+            will-change: width;
+            box-shadow: 0 0 8px var(--gold-lt);
+        }
+
+        /* ===== 高级科技感 Header ===== */
         header {
-            background: linear-gradient(135deg, var(--primary-color), #003366);
-            color: var(--light-text);
-            padding: 30px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .header-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        
-        .logo-icon {
-            font-size: 2.5rem;
-            margin-right: 15px;
-            color: var(--accent-color);
-        }
-        
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 600;
-            text-align: center;
-        }
-        
-        .search-container {
-            width: 100%;
-            max-width: 600px;
-            margin: 25px auto 0;
+            background: var(--blue-900);
+            color: #ffffff;
+            padding: 56px 0 48px;
             position: relative;
+            overflow: hidden;
         }
-        
-        .search-box {
-            width: 100%;
-            padding: 15px 20px;
-            border-radius: 50px;
-            border: none;
+
+        header::before {
+            content: ''; position: absolute; inset: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(0,85,162,.4) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(232,169,34,.12) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .circuit-bg {
+            position: absolute; inset: 0; opacity: .06;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M10 40h20M50 40h20M40 10v20M40 50v20' stroke='%23ffffff' stroke-width='1.5' fill='none'/%3E%3Ccircle cx='40' cy='40' r='4' fill='%23ffffff'/%3E%3Ccircle cx='10' cy='40' r='2.5' fill='%23ffffff'/%3E%3Ccircle cx='70' cy='40' r='2.5' fill='%23ffffff'/%3E%3Ccircle cx='40' cy='10' r='2.5' fill='%23ffffff'/%3E%3Ccircle cx='40' cy='70' r='2.5' fill='%23ffffff'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        /* 优化的主题切换按钮 */
+        .theme-toggle {
+            position: absolute; top: 20px; right: 20px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff; width: 42px; height: 42px;
+            border-radius: 50%; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: all var(--speed);
+            z-index: 10; backdrop-filter: blur(4px);
             font-size: 1.1rem;
-            box-shadow: var(--card-shadow);
-            outline: none;
-            padding-left: 50px;
         }
-        
-        .search-icon {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--primary-color);
-            font-size: 1.2rem;
+        .theme-toggle:hover { background: rgba(255,255,255,0.25); transform: scale(1.1); }
+        .theme-toggle i { transition: transform 0.4s ease; }
+        [data-theme="dark"] .dark-hidden { display: none; }
+        .dark-visible { display: none; }
+        [data-theme="dark"] .dark-visible { display: inline-block; }
+
+        .header-content {
+            position: relative; z-index: 1;
+            display: flex; flex-direction: column; align-items: center; gap: 28px;
         }
-        
-        /* 分类导航 */
-        .categories {
-            background-color: white;
-            padding: 20px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+
+        .logo {
+            display: flex; align-items: center; gap: 16px;
+            animation: fadeDown .7s var(--ease) both;
         }
-        
-        .category-tabs {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .category-tab {
-            padding: 10px 20px;
-            border-radius: 30px;
-            background-color: #f0f0f0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-        
-        .category-tab.active {
-            background-color: var(--primary-color);
-            color: white;
-        }
-        
-        .category-tab:hover:not(.active) {
-            background-color: #e0e0e0;
-        }
-        
-        /* 主要内容区域 */
-        main {
-            padding: 40px 0;
-        }
-        
-        .section-title {
+
+        .logo-badge {
+            width: 52px; height: 52px;
+            background: linear-gradient(135deg, var(--gold), #f5c842);
+            border-radius: 14px; color: #111;
+            display: flex; align-items: center; justify-content: center;
             font-size: 1.5rem;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--primary-color);
-            color: var(--primary-color);
+            box-shadow: 0 4px 16px rgba(232,169,34,.4);
+            flex-shrink: 0;
         }
-        
+
+        .logo-text h1 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 2rem; font-weight: 700;
+            letter-spacing: .5px; line-height: 1.2;
+        }
+
+        .logo-text p {
+            font-size: .8rem; font-weight: 300;
+            color: rgba(255,255,255,.55); letter-spacing: 1px;
+            font-family: 'JetBrains Mono', monospace; margin-top: 2px;
+        }
+
+        /* 极致搜索交互 */
+        .search-wrap {
+            width: 100%; max-width: 560px;
+            animation: fadeDown .7s .1s var(--ease) both;
+        }
+
+        .search-inner {
+            position: relative;
+            background: rgba(255,255,255,.08);
+            backdrop-filter: blur(8px);
+            border: 1.5px solid rgba(255,255,255,.18);
+            border-radius: var(--radius-pill);
+            transition: all var(--speed) var(--ease);
+            display: flex; align-items: center;
+        }
+
+        .search-inner:focus-within {
+            border-color: var(--gold);
+            background: rgba(255,255,255,.14);
+            box-shadow: 0 0 0 4px rgba(232,169,34,.2);
+        }
+
+        .search-icon {
+            position: absolute; left: 20px;
+            color: rgba(255,255,255,.5); font-size: 1rem; pointer-events: none;
+        }
+
+        .search-box {
+            width: 100%; background: transparent;
+            border: none; outline: none;
+            color: #ffffff; font-size: 1.05rem;
+            padding: 16px 80px 16px 48px;
+            caret-color: var(--gold);
+        }
+
+        .search-box::placeholder { color: rgba(255,255,255,.4); }
+
+        .search-shortcut {
+            position: absolute; right: 16px;
+            background: rgba(255,255,255,.1); color: rgba(255,255,255,.6);
+            font-size: .75rem; font-family: 'JetBrains Mono', monospace;
+            padding: 4px 8px; border-radius: 6px; pointer-events: none;
+            transition: opacity var(--speed);
+        }
+
+        .search-inner:focus-within .search-shortcut { opacity: 0; }
+
+        .clear-icon {
+            position: absolute; right: 20px;
+            color: rgba(255,255,255,.6); font-size: 1.2rem; cursor: pointer;
+            display: none; transition: color var(--speed);
+        }
+        .clear-icon:hover { color: var(--gold-lt); }
+
+        #result-count {
+            position: absolute; right: 60px;
+            font-size: .75rem; color: var(--gold-lt);
+            font-family: 'JetBrains Mono', monospace;
+            opacity: 0; pointer-events: none; transition: opacity var(--speed);
+        }
+        #result-count.visible { opacity: 1; }
+
+        /* ===== 吸顶动态分类导航 ===== */
+        .categories {
+            background: var(--bg-nav);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-divider);
+            position: sticky; top: 0; z-index: 200;
+            transition: box-shadow var(--speed), background var(--speed);
+        }
+
+        .categories.scrolled { box-shadow: 0 4px 15px rgba(0,0,0,.06); }
+
+        .cat-inner {
+            display: flex; align-items: center; justify-content: center;
+            gap: 12px; padding: 14px 0;
+            overflow-x: auto; scrollbar-width: none;
+        }
+
+        .cat-tab {
+            padding: 8px 24px; border-radius: var(--radius-pill);
+            font-size: .95rem; font-weight: 500; cursor: pointer; white-space: nowrap;
+            border: 1.5px solid transparent;
+            color: var(--text-desc); background: var(--bg-tab);
+            transition: all var(--speed) var(--ease);
+            display: inline-flex; align-items: center; gap: 8px;
+        }
+
+        .cat-tab:focus-visible { border-radius: var(--radius-pill); }
+
+        .cat-tab:hover:not(.active) {
+            background: var(--blue-50); color: var(--blue-600);
+        }
+
+        .cat-tab.active {
+            background: var(--blue-600); color: #fff;
+            box-shadow: 0 4px 12px rgba(0,85,162,.25);
+            transform: scale(1.03);
+        }
+
+        .count-badge {
+            background: rgba(0,0,0,.08); color: inherit;
+            font-size: .75rem; font-family: 'JetBrains Mono', monospace;
+            padding: 2px 8px; border-radius: 12px;
+        }
+        [data-theme="dark"] .count-badge { background: rgba(0,0,0,.2); }
+        .cat-tab.active .count-badge { background: rgba(255,255,255,.25); }
+
+        /* ===== 主内容与卡片网格 ===== */
+        main { padding: 40px 0 60px; min-height: 50vh; }
+
+        .section-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.4rem; font-weight: 700; color: var(--text-heading);
+            display: flex; align-items: center; gap: 10px; margin-bottom: 24px;
+        }
+
+        .section-title::before {
+            content: ''; display: inline-block; width: 4px; height: 1.2em;
+            background: linear-gradient(180deg, var(--blue-600), var(--blue-400));
+            border-radius: 2px;
+        }
+
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+            gap: 24px;
         }
-        
-        .card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--hover-shadow);
-        }
-        
-        .card-header {
-            padding: 20px;
-            background-color: var(--primary-color);
-            color: white;
-            display: flex;
-            align-items: center;
-        }
-        
-        .card-icon {
-            font-size: 1.8rem;
-            margin-right: 15px;
-            width: 40px;
-            text-align: center;
-        }
-        
-        .card-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-        
-        .card-body {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .card-description {
-            margin-bottom: 15px;
-            color: #666;
-            flex-grow: 1;
-        }
-        
-        .card-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: auto;
-        }
-        
-        .card-category {
-            background-color: #f0f0f0;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            color: #666;
-        }
-        
+
+        /* 卡片设计 */
         .card-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
+            text-decoration: none; color: inherit;
+            display: block; height: 100%; border-radius: var(--radius-lg);
         }
-        
-        .card-link i {
-            margin-left: 5px;
-            font-size: 0.9rem;
+
+        .card {
+            background: var(--bg-card); border-radius: var(--radius-lg);
+            overflow: hidden; box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-card);
+            transition: all var(--speed) var(--ease);
+            height: 100%; display: flex; flex-direction: column;
+            opacity: 0; animation: cardIn .5s var(--ease) forwards;
         }
-        
-        /* 访问统计样式 */
-        .visit-stats {
-            background-color: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: var(--card-shadow);
-            text-align: center;
+
+        @keyframes cardIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
-        
-        .stats-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
+
+        /* 强化悬浮反馈：增加发光效果 */
+        .card-link:hover .card, .card-link:focus-visible .card {
+            transform: translateY(-5px); 
+            box-shadow: var(--shadow-glow);
+            border-color: var(--blue-400);
         }
-        
-        .stat-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .card-link:active .card { transform: translateY(-2px); }
+
+        .card-head {
+            padding: 20px 22px 16px;
+            display: flex; align-items: flex-start; gap: 14px;
+            border-bottom: 1px solid var(--border-divider);
         }
-        
+
+        .card-icon-wrap {
+            width: 46px; height: 46px; flex-shrink: 0; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem; background: var(--blue-50); color: var(--blue-600);
+            transition: all var(--speed);
+        }
+
+        .card-link:hover .card-icon-wrap {
+            background: var(--blue-600); color: #fff;
+            transform: scale(1.05) rotate(-5deg);
+        }
+
+        .card-meta { flex: 1; min-width: 0; }
+
+        .card-title {
+            font-size: 1.1rem; font-weight: 700; color: var(--text-heading);
+            line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+            transition: color var(--speed);
+        }
+
+        .card-link:hover .card-title { color: var(--blue-600); }
+
+        .card-category-tag {
+            display: inline-flex; align-items: center; gap: 4px;
+            margin-top: 6px; font-size: .75rem; font-weight: 500; color: var(--text-muted);
+        }
+        .card-category-tag::before {
+            content: ''; width: 5px; height: 5px; border-radius: 50%; background: currentColor;
+        }
+
+        .card-body {
+            padding: 16px 22px 20px; flex: 1; display: flex; flex-direction: column;
+        }
+
+        .card-desc {
+            color: var(--text-desc); font-size: .9rem; line-height: 1.6;
+            flex: 1; display: -webkit-box; -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical; overflow: hidden;
+        }
+
+        mark.hl {
+            background: rgba(232,169,34,.3); color: inherit;
+            border-radius: 2px; padding: 0 2px;
+        }
+        [data-theme="dark"] mark.hl { background: rgba(232,169,34,.5); color: #fff;}
+
+        .card-footer {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-divider);
+        }
+
+        .card-cta {
+            font-size: .85rem; font-weight: 600; color: var(--blue-600);
+            display: flex; align-items: center; gap: 5px;
+            transition: gap var(--speed), color var(--speed);
+        }
+        .card-link:hover .card-cta { color: var(--gold); gap: 10px; }
+        .no-link-tag { font-size: .85rem; color: var(--text-muted); font-style: italic; }
+
+        /* 空状态指示器 */
+        .no-results {
+            grid-column: 1 / -1; text-align: center;
+            padding: 60px 20px; color: var(--text-muted);
+            animation: fadeUp 0.3s ease forwards;
+        }
+        .no-results i { font-size: 3rem; margin-bottom: 16px; opacity: 0.5; }
+        .no-results p { font-size: 1.1rem; color: var(--text-heading); font-weight: 500; }
+        .no-results small { font-size: .85rem; display: block; margin-top: 6px; }
+
+        /* ===== 数据统计面板 ===== */
+        .stats-section {
+            background: var(--bg-card); border: 1px solid var(--border-card);
+            border-radius: var(--radius-lg); padding: 32px; margin-top: 50px;
+            display: flex; justify-content: center; gap: 80px; flex-wrap: wrap;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-item { text-align: center; }
         .stat-value {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--primary-color);
+            font-family: 'JetBrains Mono', monospace; font-size: 2.6rem;
+            font-weight: 500; color: var(--blue-600); line-height: 1;
         }
-        
         .stat-label {
-            font-size: 0.9rem;
-            color: #666;
-            margin-top: 5px;
+            font-size: .85rem; color: var(--text-muted);
+            margin-top: 10px; font-weight: 500; letter-spacing: 1px;
         }
-        
-        /* 页脚样式 */
+
+        /* ===== 页脚 ===== */
         footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 30px 0;
-            text-align: center;
+            background: var(--blue-900); color: rgba(255,255,255,.6);
+            padding: 40px 0; text-align: center;
         }
-        
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .footer-title {
+            font-family: 'Noto Serif SC', serif; color: rgba(255,255,255,.85);
+            font-size: 1.1rem; font-weight: 600; margin-bottom: 10px;
         }
-        
-        .footer-logo {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+        .footer-text { font-size: .85rem; line-height: 1.8; }
+        .footer-divider { width: 40px; height: 1px; background: rgba(255,255,255,.2); margin: 16px auto; }
+
+        /* ===== 悬浮工具 ===== */
+        #back-top {
+            position: fixed; bottom: 30px; right: 30px;
+            width: 48px; height: 48px;
+            background: var(--blue-600); color: #fff;
+            border: none; border-radius: 50%;
+            font-size: 1.2rem; cursor: pointer; box-shadow: var(--shadow-md);
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden; transform: translateY(15px);
+            transition: all var(--speed); z-index: 500;
         }
-        
-        .footer-text {
-            opacity: 0.8;
-            margin-bottom: 10px;
-        }
-        
-        /* 响应式设计 */
+        #back-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+        #back-top:hover { background: var(--blue-500); transform: translateY(-5px); }
+
+        /* ===== 响应式适配 ===== */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-            
-            .cards-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 20px;
-            }
-            
-            .category-tabs {
-                justify-content: flex-start;
-                overflow-x: auto;
-                padding-bottom: 10px;
-            }
-            
-            .stats-container {
-                gap: 20px;
-            }
-            
-            .stat-value {
-                font-size: 1.5rem;
-            }
+            .logo-text h1 { font-size: 1.6rem; }
+            .theme-toggle { top: 15px; right: 15px; width: 38px; height: 38px; font-size: 0.95rem;}
+            .search-box { padding-left: 44px; padding-right: 44px; }
+            .search-shortcut, #result-count { display: none; }
+            .cards-grid { grid-template-columns: 1fr; gap: 16px; }
+            .cat-inner { justify-content: flex-start; padding: 12px 20px; }
+            .stats-section { gap: 40px; padding: 24px; }
+            .stat-value { font-size: 2rem; }
+            #back-top { bottom: 20px; right: 20px; width: 44px; height: 44px; font-size: 1rem; }
         }
-        
-        @media (max-width: 480px) {
-            .cards-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 1.5rem;
-            }
+
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-16px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <!-- 头部区域 -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <i class="fas fa-university logo-icon"></i>
-                    <h1>东大集电常用网址</h1>
+
+<div id="progress-bar"></div>
+
+<header>
+    <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+        <i class="fas fa-moon dark-hidden"></i>
+        <i class="fas fa-sun dark-visible"></i>
+    </button>
+    <div class="circuit-bg"></div>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-badge"><i class="fas fa-microchip"></i></div>
+                <div class="logo-text">
+                    <h1>东大集电 · 常用导航</h1>
+                    <p>SEU IC COLLEGE · RESOURCE HUB</p>
                 </div>
-                <div class="search-container">
-                    <input type="text" class="search-box" placeholder="搜索网址名称、描述或分类...">
+            </div>
+
+            <div class="search-wrap">
+                <div class="search-inner">
                     <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-box" id="searchInput" placeholder="搜索名称、描述或分类…" aria-label="搜索网址" autocomplete="off">
+                    <span id="result-count"></span>
+                    <button class="clear-icon" id="clearSearchBtn" aria-label="清空搜索" style="background:none; border:none;"><i class="fas fa-times"></i></button>
+                    <kbd class="search-shortcut">Ctrl K</kbd>
                 </div>
             </div>
         </div>
-    </header>
-    
-    <!-- 分类导航 -->
-    <section class="categories">
-        <div class="container">
-            <div class="category-tabs">
-                <div class="category-tab active" data-category="all">全部</div>
-                <div class="category-tab" data-category="academic">学术</div>
-                <div class="category-tab" data-category="service">服务</div>
-                <div class="category-tab" data-category="resource">资源</div>
-                <div class="category-tab" data-category="entertainment">娱乐</div>
-            </div>
+    </div>
+</header>
+
+<nav class="categories" id="categoryNav" aria-label="网址分类">
+    <div class="container">
+        <div class="cat-inner" id="categoryTabs" role="tablist">
+            <button class="cat-tab active" data-category="all" role="tab" aria-selected="true">全部 <span class="count-badge" id="cnt-all">0</span></button>
+            <button class="cat-tab" data-category="school" role="tab" aria-selected="false">校用 <span class="count-badge" id="cnt-school">0</span></button>
+            <button class="cat-tab" data-category="party" role="tab" aria-selected="false">团党 <span class="count-badge" id="cnt-party">0</span></button>
+            <button class="cat-tab" data-category="entertainment" role="tab" aria-selected="false">娱乐 <span class="count-badge" id="cnt-entertainment">0</span></button>
+            <button class="cat-tab" data-category="other" role="tab" aria-selected="false">其他 <span class="count-badge" id="cnt-other">0</span></button>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+    <div class="section-header">
+        <h2 class="section-title">资源列表</h2>
+    </div>
+
+    <div class="cards-grid" id="cards-container" role="list" aria-live="polite"></div>
+
+    <section class="stats-section" aria-label="访问统计">
+        <div class="stat-item">
+            <div class="stat-value" id="total-visits">—</div>
+            <div class="stat-label">本地访问总次</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value" id="link-count">0</div>
+            <div class="stat-label">收录网址数量</div>
         </div>
     </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p class="footer-title"><i class="fas fa-graduation-cap"></i> 东南大学集成电路学院</p>
+        <div class="footer-divider"></div>
+        <p class="footer-text">常用网址导航 · 便捷访问校园资源</p>
+        <p class="footer-text">© 2025届集电 · Xing</p>
+    </div>
+</footer>
+
+<button id="back-top" aria-label="返回顶部"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+    /* ===== 核心数据配置 ===== */
+    const categoryMap = { school: '校用', party: '团党', entertainment: '娱乐', other: '其他' };
+
+    const websites = [
+        { id:1,  title:"东南大学官方网站",   description:"东南大学官方网站，获取学校最新动态和官方信息",                 url:"https://www.seu.edu.cn",                                        category:"school",        icon:"fas fa-home" },
+        { id:2,  title:"物理实验中心",       description:"物理实验教学平台，预约和管理物理实验",                         url:"https://phylab.seu.edu.cn/",                                    category:"school",        icon:"fas fa-flask" },
+        { id:3,  title:"数智东南工作台",     description:"校园信息综合服务平台，一站式校园服务（PC端）",                 url:"https://i.seu.edu.cn/default/index.html#/",                     category:"school",        icon:"fas fa-info-circle" },
+        { id:4,  title:"劳动教育与实践平台", description:"劳动教育课程管理和实践活动平台",                               url:"https://labor.seu.edu.cn/",                                     category:"school",        icon:"fas fa-hands-helping" },
+        { id:5,  title:"图书馆",             description:"学术资源与文献检索，电子图书和数据库访问",                     url:"http://www.lib.seu.edu.cn/",                                    category:"school",        icon:"fas fa-book" },
+        { id:6,  title:"云课堂",             description:"在线学习平台，课程视频和教学资源，可查看课程回放",             url:"https://cvs.seu.edu.cn/#/unify-portal",                         category:"school",        icon:"fas fa-cloud" },
+        { id:7,  title:"GPA 计算器",         description:"GPA 计算工具，帮助快速计算学业绩点",                           url:"https://seucseweb.github.io/GPA-Calculator/",                   category:"school",        icon:"fas fa-calculator" },
+        { id:8,  title:"集成电路学院",       description:"集成电路学院官网，学院新闻、通知与公告",                       url:"https://ic.seu.edu.cn/",                                        category:"school",        icon:"fas fa-laptop-code" },
+        { id:9,  title:"选课系统",           description:"课程选择与管理，每学期选课入口（非选课期间无法访问）",         url:"https://newxk.urp.seu.edu.cn/xsxk/profile/index.html",          category:"school",        icon:"fas fa-clipboard-list" },
+        { id:10, title:"数智东南咨询",       description:"学生校内身份码、教辅界面、校园新闻和公告（PC端）",             url:"https://todo.seu.edu.cn/h5/pages/multipleRoles/MultipleRoles",  category:"school",        icon:"fas fa-newspaper" },
+        { id:11, title:"教务处办事平台",     description:"学籍和成绩相关服务，学生事务办理入口",                         url:"https://jwc.seu.edu.cn/",                                       category:"school",        icon:"fas fa-file-alt" },
+        { id:12, title:"文档云（网盘）",     description:"云端文档存储服务，随时随地访问和共享文件",                     url:"https://pan.seu.edu.cn/#/",                                     category:"school",        icon:"fas fa-file-upload" },
+        { id:13, title:"网络中心",           description:"网络与信息中心，校园网络相关服务",                             url:"https://nic.seu.edu.cn/",                                       category:"school",        icon:"fas fa-network-wired" },
+        { id:15, title:"办事大厅",           description:"网上办事服务中心，一站式校园数字化服务",                       url:"https://ehall.seu.edu.cn/new/index.html",                       category:"school",        icon:"fas fa-building" },
+        { id:16, title:"财务处",             description:"学费缴纳和财务相关服务入口",                                   url:"https://cwc.seu.edu.cn/main.psp",                               category:"school",        icon:"fas fa-money-check-alt" },
+        { id:17, title:"第二课堂",           description:"课外活动管理平台，社团和活动信息",                             url:"https://dekt.seu.edu.cn/",                                      category:"school",        icon:"fas fa-users" },
+        { id:18, title:"东大邮箱",           description:"官方邮件服务，学校邮箱登录入口",                               url:"https://mail.seu.edu.cn/",                                      category:"school",        icon:"fas fa-envelope" },
+        { id:19, title:"薪火计划",           description:"学习资料和资源共享平台",                                       url:"https://tommy.seu.edu.cn/filebrowser/login",                    category:"school",        icon:"fas fa-share-alt" },
+        { id:21, title:"正版软件平台",       description:"正版企业级软件下载，供校内用户免费使用",                       url:"https://software.seu.edu.cn/soft?categoryid=9",                 category:"school",        icon:"fas fa-box-open" },
+        { id:26, title:"节假日去向登记",     description:"东南大学本科生节假日去向登记系统",                             url:"https://ehall.seu.edu.cn/xsfw/sys/jjrlfxapp/*default/index.do#/register", category:"school",  icon:"fas fa-calendar-check" },
+        { id:27, title:"教室借用",           description:"东南大学教室借用申请系统",                                     url:"https://ehall.seu.edu.cn/gsapp/sys/jsjyappseu1/*default/index.do#/jsjycx", category:"school", icon:"fas fa-door-open" },
+        { id:28, title:"学生基本信息",       description:"查询与维护个人学籍等基本信息",                                 url:"https://ehall.seu.edu.cn/xsfw/sys/jbxxapp/*default/index.do#/wdxx",        category:"school", icon:"fas fa-id-card" },
+        { id:24, title:"智慧团建",           description:"网上共青团·智慧团建系统",                                     url:"https://zhtj.youth.cn/zhtj/",                                   category:"party",         icon:"fas fa-flag" },
+        { id:25, title:"大学生网络党校",     description:"国家教育行政学院大学生网络党校",                               url:"http://www.uucps.edu.cn/",                                      category:"party",         icon:"fas fa-landmark" },
+        { id:20, title:"扫雷游戏",           description:"经典扫雷小游戏，休闲娱乐（学院自制）",                         url:"https://seucseweb.github.io/Minesweeper/",                      category:"entertainment", icon:"fas fa-bomb" },
+        { id:23, title:"自制游戏",           description:"作者自制游戏，如涉及版权问题将立即删除",                       url:"https://xingkaiyi.itch.io/nezha20-escapemowan",                 category:"entertainment", icon:"fas fa-dice" },
+        { id:22, title:"待补充",             description:"因代码开源，用户可自行添加更多功能与链接",                     url:"",                                                              category:"other",         icon:"fas fa-plus-circle" }
+    ];
+
+    /* ===== 核心逻辑 ===== */
     
-    <!-- 主要内容区域 -->
-    <main class="container">
-        <section class="website-section">
-            <h2 class="section-title">常用网址</h2>
-            <div class="cards-grid" id="cards-container">
-                <!-- 卡片将通过JavaScript动态生成 -->
-            </div>
-        </section>
+    const debounce = (fn, wait) => {
+        let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), wait); };
+    };
+
+    const escapeRegExp = string => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+    const highlightText = (text, term) => {
+        if (!term) return text;
+        const regex = new RegExp(`(${escapeRegExp(term)})`, 'gi');
+        return text.replace(regex, '<mark class="hl">$1</mark>');
+    };
+
+    let activeCategory = 'all';
+    let searchTerm = '';
+
+    const getFilteredWebsites = () => websites.filter(w => {
+        const isCatMatch = activeCategory === 'all' || w.category === activeCategory;
+        const q = searchTerm.toLowerCase();
+        const isSearchMatch = !q || w.title.toLowerCase().includes(q) || w.description.toLowerCase().includes(q) || categoryMap[w.category].includes(q);
+        return isCatMatch && isSearchMatch;
+    });
+
+    const renderCards = () => {
+        const container = document.getElementById('cards-container');
+        const clearBtn = document.getElementById('clearSearchBtn');
+        const resultCount = document.getElementById('result-count');
+        const filtered = getFilteredWebsites();
+
+        clearBtn.style.display = searchTerm.length > 0 ? 'block' : 'none';
         
-        <!-- 访问统计 -->
-        <section class="visit-stats">
-            <div class="stats-container">
-                <div class="stat-item">
-                    <div class="stat-value" id="total-visits">0</div>
-                    <div class="stat-label">总访问量</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value" id="unique-visitors">0</div>
-                    <div class="stat-label">访客数</div>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <!-- 页脚 -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fas fa-graduation-cap"></i> 东大集电
-                </div>
-                <p class="footer-text">常用网址导航 - 便捷访问校园资源</p>
-                <p class="footer-text">25界集电.Xing</p>
-            </div>
-        </div>
-    </footer>
-    
-    <script>
-        // 访问统计功能
-        function updateVisitStats() {
-            // 从localStorage获取统计数据
-            let stats = JSON.parse(localStorage.getItem('visitStats')) || {
-                totalVisits: 0,
-                uniqueVisitors: 0,
-                visitorIds: []
-            };
-            
-            // 生成或获取访客ID
-            let visitorId = localStorage.getItem('visitorId');
-            if (!visitorId) {
-                visitorId = 'visitor_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-                localStorage.setItem('visitorId', visitorId);
-                
-                // 如果是新访客，增加访客数
-                if (!stats.visitorIds.includes(visitorId)) {
-                    stats.visitorIds.push(visitorId);
-                    stats.uniqueVisitors = stats.visitorIds.length;
-                }
-            }
-            
-            // 增加总访问量
-            stats.totalVisits++;
-            
-            // 保存更新后的统计数据
-            localStorage.setItem('visitStats', JSON.stringify(stats));
-            
-            // 更新页面显示
-            document.getElementById('total-visits').textContent = stats.totalVisits.toLocaleString();
-            document.getElementById('unique-visitors').textContent = stats.uniqueVisitors.toLocaleString();
+        // 核心Bug修复：仅当输入了搜索词汇时，才在搜索栏中显示"找到 X 个"
+        if (searchTerm.length > 0) {
+            resultCount.textContent = `找到 ${filtered.length} 个`;
+            resultCount.classList.add('visible');
+        } else {
+            resultCount.classList.remove('visible');
         }
+
+        container.innerHTML = '';
+
+        if (filtered.length === 0) {
+            container.innerHTML = `
+                <div class="no-results" role="status">
+                    <i class="fas fa-search-minus"></i>
+                    <p>未找到匹配的资源</p>
+                    <small>请尝试更换搜索词或选择“全部”分类</small>
+                </div>`;
+            return;
+        }
+
+        const fragment = document.createDocumentFragment();
         
-        // 网址数据
-        const websites = [
-            {
-                id: 1,
-                title: "东南大学官方网站",
-                description: "东南大学官方网站，获取学校最新动态和官方信息",
-                url: "https://www.seu.edu.cn",
-                category: "service",
-                icon: "fas fa-home"
-            },
-            {
-                id: 2,
-                title: "物理实验中心",
-                description: "物理实验教学平台，预约和管理物理实验",
-                url: "https://phylab.seu.edu.cn/",
-                category: "academic",
-                icon: "fas fa-flask"
-            },
-            {
-                id: 3,
-                title: "数智东南工作台pc端",
-                description: "校园信息综合服务平台，一站式校园服务",
-                url: "https://i.seu.edu.cn/default/index.html#/",
-                category: "service",
-                icon: "fas fa-info-circle"
-            },
-            {
-                id: 4,
-                title: "劳动教育与实践平台",
-                description: "劳动教育课程管理和实践活动平台",
-                url: "https://labor.seu.edu.cn/",
-                category: "service",
-                icon: "fas fa-hands-helping"
-            },
-            {
-                id: 5,
-                title: "图书馆",
-                description: "学术资源与文献检索，电子图书和数据库访问",
-                url: "http://www.lib.seu.edu.cn/",
-                category: "resource",
-                icon: "fas fa-book"
-            },
-            {
-                id: 6,
-                title: "云课堂",
-                description: "在线学习平台，课程视频和教学资源，可以查看教室课程回访",
-                url: "https://cvs.seu.edu.cn/#/unify-portal",
-                category: "academic",
-                icon: "fas fa-cloud"
-            },
-            {
-                id: 7,
-                title: "GPA计算器",
-                description: "GPA计算工具，帮助计算学业成绩",
-                url: "https://seucseweb.github.io/GPA-Calculator/",
-                category: "academic",
-                icon: "fas fa-calculator"
-            },
-            {
-                id: 8,
-                title: "集成电路学院",
-                description: "集成电路学院官网，学院新闻和通知",
-                url: "https://ic.seu.edu.cn/",
-                category: "academic",
-                icon: "fas fa-laptop-code"
-            },
-            {
-                id: 9,
-                title: "选课系统",
-                description: "课程选择与管理，每学期选课入口（非选课期间无法访问）",
-                url: "https://newxk.urp.seu.edu.cn/xsxk/profile/index.html",
-                category: "academic",
-                icon: "fas fa-clipboard-list"
-            },
-            {
-                id: 10,
-                title: "数智东南咨询pc端",
-                description: "学生校内身份码，教辅界面，校园新闻和公告",
-                url: "https://todo.seu.edu.cn/h5/pages/multipleRoles/MultipleRoles",
-                category: "service",
-                icon: "fas fa-newspaper"
-            },
-            {
-                id: 11,
-                title: "教务处办事平台",
-                description: "学生校内身份码，事务办理，学籍和成绩相关服务",
-                url: "https://jwc.seu.edu.cn/",
-                category: "service",
-                icon: "fas fa-file-alt"
-            },
-            {
-                id: 12,
-                title: "文档云",
-                description: "云端文档存储服务，随时随地访问文件",
-                url: "https://pan.seu.edu.cn/#/",
-                category: "resource",
-                icon: "fas fa-file-upload"
-            },
-            {
-                id: 13,
-                title: "网络中心",
-                description: "网络与信息中心，校园网络服务",
-                url: "https://nic.seu.edu.cn/",
-                category: "service",
-                icon: "fas fa-network-wired"
-            },
-            {
-                id: 15,
-                title: "办事大厅",
-                description: "网上办事服务中心，一站式校园服务",
-                url: "https://ehall.seu.edu.cn/new/index.html",
-                category: "service",
-                icon: "fas fa-building"
-            },
-            {
-                id: 16,
-                title: "财务处",
-                description: "财务管理与营销，学费和财务相关服务",
-                url: "https://cwc.seu.edu.cn/main.psp",
-                category: "service",
-                icon: "fas fa-money-check-alt"
-            },
-            {
-                id: 17,
-                title: "第二课堂",
-                description: "课外活动管理平台，社团和活动信息",
-                url: "https://dekt.seu.edu.cn/zhtw/?t_s=1697987944225&ticket=ST-22417274-de9JlA1krr-ZPh8M-o1RMlN0yIU-ecs-e8cb-0001#/",
-                category: "service",
-                icon: "fas fa-users"
-            },
-            {
-                id: 18,
-                title: "东大邮箱",
-                description: "官方邮件服务，学校邮箱登录",
-                url: "https://mail.seu.edu.cn/",
-                category: "service",
-                icon: "fas fa-envelope"
-            },
-            {
-                id: 19,
-                title: "薪火计划",
-                description: "学习资源共享平台，学习资料和资源共享",
-                url: "https://tommy.seu.edu.cn/filebrowser/login?redirect=%2Ffiles%2F",
-                category: "resource",
-                icon: "fas fa-share-alt"
-            },
-            {
-                id: 20,
-                title: "扫雷游戏",
-                description: "经典扫雷小游戏，休闲娱乐",
-                url: "https://seucseweb.github.io/Minesweeper/",
-                category: "entertainment",
-                icon: "fas fa-bomb"
-            },
-            // 新增的两个学术组件
-            {
-                id: 21,
-                title: "东南大学正版软件管理平台",
-                description: "正版企业版软件下载",
-                url: "https://software.seu.edu.cn/soft?categoryid=9",
-                category: "academic",
-                icon: "fas fa-file-alt"
-            },
-            {
-                id: 22,
-                title: "等等",
-                description: "因代码开源，所以用户可以自行添加功能",
-                url: "",
-                category: "academic",
-                icon: "fas fa-project-diagram"
-            },
-            // 新增的一个娱乐组件
-            {
-                id: 23,
-                title: "自制游戏",
-                description: "如果涉及版权问题，将立即删除并深表抱歉",
-                url: "https://xingkaiyi.itch.io/nezha20-escapemowan",
-                category: "entertainment",
-                icon: "fas fa-dice"
+        filtered.forEach((site, idx) => {
+            const isLink = !!site.url;
+            const WrapperTag = isLink ? 'a' : 'div';
+            const hrefAttr = isLink ? `href="${site.url}" target="_blank" rel="noopener noreferrer"` : '';
+            const ctaHtml = isLink ? `<span class="card-cta">前往访问 <i class="fas fa-arrow-right"></i></span>` : `<span class="no-link-tag">暂无链接</span>`;
+            const delay = Math.min(idx * 30, 300); // 阶梯动画加速
+
+            const cardWrapper = document.createElement(WrapperTag);
+            if(isLink) {
+                cardWrapper.href = site.url;
+                cardWrapper.target = '_blank';
+                cardWrapper.rel = 'noopener noreferrer';
             }
-        ];
-        
-        // 分类映射
-        const categoryMap = {
-            "academic": "学术",
-            "service": "服务",
-            "resource": "资源",
-            "entertainment": "娱乐"
-        };
-        
-        // 初始化页面
-        document.addEventListener('DOMContentLoaded', function() {
-            const cardsContainer = document.getElementById('cards-container');
-            const categoryTabs = document.querySelectorAll('.category-tab');
-            const searchBox = document.querySelector('.search-box');
+            cardWrapper.className = 'card-link';
+            cardWrapper.setAttribute('role', 'listitem');
+            cardWrapper.tabIndex = 0; // 支持 Tab 聚焦
             
-            // 更新访问统计
-            updateVisitStats();
-            
-            // 渲染卡片
-            function renderCards(filteredWebsites = websites) {
-                cardsContainer.innerHTML = '';
-                
-                filteredWebsites.forEach(website => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    card.innerHTML = `
-                        <div class="card-header">
-                            <div class="card-icon">
-                                <i class="${website.icon}"></i>
-                            </div>
-                            <div class="card-title">${website.title}</div>
+            cardWrapper.innerHTML = `
+                <article class="card" style="animation-delay: ${delay}ms">
+                    <div class="card-head">
+                        <div class="card-icon-wrap">
+                            <i class="${site.icon}"></i>
                         </div>
-                        <div class="card-body">
-                            <p class="card-description">${website.description}</p>
-                            <div class="card-footer">
-                                <span class="card-category">${categoryMap[website.category]}</span>
-                                <a href="${website.url}" class="card-link" target="_blank">
-                                    访问 <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
+                        <div class="card-meta">
+                            <div class="card-title" title="${site.title}">${highlightText(site.title, searchTerm)}</div>
+                            <div class="card-category-tag">${categoryMap[site.category]}</div>
                         </div>
-                    `;
-                    cardsContainer.appendChild(card);
-                });
-            }
-            
-            // 初始渲染
-            renderCards();
-            
-            // 分类筛选功能
-            categoryTabs.forEach(tab => {
-                tab.addEventListener('click', function() {
-                    // 更新活动标签
-                    categoryTabs.forEach(t => t.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    const category = this.getAttribute('data-category');
-                    
-                    if (category === 'all') {
-                        renderCards();
-                    } else {
-                        const filtered = websites.filter(website => website.category === category);
-                        renderCards(filtered);
-                    }
-                });
-            });
-            
-            // 搜索功能
-            searchBox.addEventListener('input', function() {
-                const searchTerm = this.value.toLowerCase().trim();
-                
-                if (searchTerm === '') {
-                    renderCards();
-                    return;
-                }
-                
-                const filtered = websites.filter(website => {
-                    return website.title.toLowerCase().includes(searchTerm) ||
-                           website.description.toLowerCase().includes(searchTerm) ||
-                           categoryMap[website.category].includes(searchTerm);
-                });
-                
-                renderCards(filtered);
-            });
+                    </div>
+                    <div class="card-body">
+                        <p class="card-desc" title="${site.description}">${highlightText(site.description, searchTerm)}</p>
+                        <div class="card-footer">
+                            ${ctaHtml}
+                        </div>
+                    </div>
+                </article>
+            `;
+            fragment.appendChild(cardWrapper);
         });
-    </script>
+        container.appendChild(fragment);
+    };
+
+    const updateCounters = () => {
+        document.getElementById('cnt-all').textContent = websites.length;
+        ['school', 'party', 'entertainment', 'other'].forEach(cat => {
+            document.getElementById(`cnt-${cat}`).textContent = websites.filter(w => w.category === cat).length;
+        });
+        document.getElementById('link-count').textContent = websites.filter(w => w.url !== "").length;
+    };
+
+    const updateVisitStats = () => {
+        try {
+            const stats = JSON.parse(localStorage.getItem('seuNavStats') || '{"totalVisits":0}');
+            stats.totalVisits++;
+            localStorage.setItem('seuNavStats', JSON.stringify(stats));
+            document.getElementById('total-visits').textContent = stats.totalVisits.toLocaleString();
+        } catch (e) {
+            document.getElementById('total-visits').textContent = '—';
+        }
+    };
+
+    // 高性能帧节流滚动 (rAF)
+    let isScrolling = false;
+    const handleScroll = () => {
+        if(!isScrolling) {
+            window.requestAnimationFrame(() => {
+                const doc = document.documentElement;
+                const scrollTop = doc.scrollTop || document.body.scrollTop;
+                const scrollHeight = doc.scrollHeight || document.body.scrollHeight;
+                const clientHeight = doc.clientHeight;
+                const scrollPercent = (scrollTop / (scrollHeight - clientHeight)) * 100;
+                
+                document.getElementById('progress-bar').style.width = scrollPercent + '%';
+                document.getElementById('categoryNav').classList.toggle('scrolled', scrollTop > 50);
+                document.getElementById('back-top').classList.toggle('visible', scrollTop > 300);
+                isScrolling = false;
+            });
+            isScrolling = true;
+        }
+    };
+
+    /* ===== 主题切换逻辑 ===== */
+    const initThemeToggle = () => {
+        const toggleBtn = document.getElementById('themeToggle');
+        toggleBtn.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            const target = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', target);
+            localStorage.setItem('seuNavTheme', target);
+        });
+    };
+
+    /* ===== 初始化 ===== */
+    document.addEventListener('DOMContentLoaded', () => {
+        updateVisitStats();
+        updateCounters();
+        initThemeToggle();
+
+        if (window.location.hash) {
+            const hashVal = window.location.hash.substring(1);
+            if (['all', 'school', 'party', 'entertainment', 'other'].includes(hashVal)) {
+                activeCategory = hashVal;
+                document.querySelectorAll('.cat-tab').forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                const targetTab = document.querySelector(`.cat-tab[data-category="${hashVal}"]`);
+                targetTab.classList.add('active');
+                targetTab.setAttribute('aria-selected', 'true');
+            }
+        }
+
+        renderCards();
+
+        // 事件委托：处理分类切换 (兼容点击与键盘回车)
+        document.getElementById('categoryTabs').addEventListener('click', (e) => {
+            const tab = e.target.closest('.cat-tab');
+            if (!tab) return;
+            document.querySelectorAll('.cat-tab').forEach(t => {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
+            });
+            tab.classList.add('active');
+            tab.setAttribute('aria-selected', 'true');
+            activeCategory = tab.dataset.category;
+            history.replaceState(null, null, `#${activeCategory}`);
+            renderCards();
+        });
+
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', debounce((e) => {
+            searchTerm = e.target.value.trim();
+            renderCards();
+        }, 200));
+
+        document.getElementById('clearSearchBtn').addEventListener('click', () => {
+            searchInput.value = ''; searchTerm = '';
+            searchInput.focus(); renderCards();
+        });
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        document.getElementById('back-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+                e.preventDefault(); searchInput.focus();
+            }
+            if (e.key === 'Escape' && document.activeElement === searchInput) {
+                searchInput.blur(); searchInput.value = ''; searchTerm = ''; renderCards();
+            }
+        });
+    });
+</script>
 </body>
 </html>
