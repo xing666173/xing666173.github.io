@@ -5,6 +5,7 @@
   "mentors": [
     {
       "name": "王俊嘉",
+      "search_aliases": [],
       "title": "教授",
       "unit": "集成电路学院",
       "research_directions": [
@@ -69,6 +70,7 @@
     },
     {
       "name": "张秋波",
+      "search_aliases": [],
       "title": "青年首席教授",
       "unit": "东南大学",
       "research_directions": [
@@ -128,6 +130,7 @@
     },
     {
       "name": "彭亚锐",
+      "search_aliases": [],
       "title": "教授",
       "unit": "集成电路学院",
       "research_directions": [
@@ -195,6 +198,7 @@
     },
     {
       "name": "张建福",
+      "search_aliases": [],
       "title": "首席教授",
       "unit": "东南大学",
       "research_directions": [
@@ -245,6 +249,7 @@
     },
     {
       "name": "马海峰",
+      "search_aliases": [],
       "title": "教授",
       "unit": "haifeng.ma@seu.edu.cn",
       "research_directions": [
@@ -290,6 +295,7 @@
     },
     {
       "name": "李旻",
+      "search_aliases": [],
       "title": "研究员",
       "unit": "min.li@seu.edu.cn",
       "research_directions": [
@@ -336,6 +342,7 @@
     },
     {
       "name": "徐涛",
+      "search_aliases": [],
       "title": "教授",
       "unit": "MEMS教育部重点实验室",
       "research_directions": [
@@ -389,6 +396,7 @@
     },
     {
       "name": "李霁",
+      "search_aliases": [],
       "title": "教授",
       "unit": "MEMS教育部重点实验室",
       "research_directions": [
@@ -453,6 +461,7 @@
     },
     {
       "name": "张瑞琳",
+      "search_aliases": [],
       "title": "研究员",
       "unit": "东南大学集成电路学院",
       "research_directions": [
@@ -518,6 +527,7 @@
     },
     {
       "name": "葛立新",
+      "search_aliases": [],
       "title": "教授",
       "unit": "集成电路学院 & EDA国创中心",
       "research_directions": [
@@ -568,6 +578,7 @@
     },
     {
       "name": "黄虎彪",
+      "search_aliases": [],
       "title": "教授, 博士生导师",
       "unit": "东南大学",
       "research_directions": [
@@ -623,6 +634,7 @@
     },
     {
       "name": "Nazeeruddin",
+      "search_aliases": [],
       "title": "院士",
       "unit": "钙钛矿光电技术创新中心",
       "research_directions": [
@@ -700,6 +712,7 @@
     },
     {
       "name": "李晗",
+      "search_aliases": [],
       "title": "首席教授",
       "unit": "东南大学集成电路学院",
       "research_directions": [
@@ -748,6 +761,7 @@
     },
     {
       "name": "张学永",
+      "search_aliases": [],
       "title": "教授",
       "unit": "东南大学",
       "research_directions": [
@@ -802,6 +816,7 @@
     },
     {
       "name": "张家钧",
+      "search_aliases": [],
       "title": "首席教授",
       "unit": "东南大学",
       "research_directions": [
@@ -857,6 +872,7 @@
     },
     {
       "name": "陈朝晖",
+      "search_aliases": [],
       "title": "首席教授",
       "unit": "集成电路学院",
       "research_directions": [
@@ -903,6 +919,7 @@
     },
     {
       "name": "刘鹏程",
+      "search_aliases": [],
       "title": "青年首席教授",
       "unit": "MEMS教育部重点实验室",
       "research_directions": [
@@ -947,6 +964,7 @@
     },
     {
       "name": "卢海洲",
+      "search_aliases": [],
       "title": "教授、研究员",
       "unit": "MEMS教育部重点实验室/钙钛矿光电创新中心",
       "research_directions": [
@@ -1014,6 +1032,7 @@
     },
     {
       "name": "窦广彬",
+      "search_aliases": [],
       "title": "教授",
       "unit": "MEMS教育部重点实验室",
       "research_directions": [
@@ -1081,6 +1100,7 @@
     },
     {
       "name": "黄庆安",
+      "search_aliases": [],
       "title": "教授",
       "unit": "电子科学与工程学院",
       "research_directions": [
@@ -1159,6 +1179,7 @@
     },
     {
       "name": "黄晓东",
+      "search_aliases": [],
       "title": "教授",
       "unit": "东南大学集成电路学院",
       "research_directions": [
@@ -1233,6 +1254,7 @@
     },
     {
       "name": "廖小平",
+      "search_aliases": [],
       "title": "教授",
       "unit": "MEMS教育部重点实验室",
       "research_directions": [
@@ -1285,6 +1307,7 @@
     },
     {
       "name": "李力一",
+      "search_aliases": [],
       "title": "教授",
       "unit": "集成电路（IC）学院",
       "research_directions": [
@@ -1348,6 +1371,7 @@
     },
     {
       "name": "秦明",
+      "search_aliases": [],
       "title": "教授、研究员",
       "unit": "MEMS教育部重点实验室",
       "research_directions": [
@@ -1401,6 +1425,7 @@
     },
     {
       "name": "尚金堂",
+      "search_aliases": [],
       "title": "教授",
       "unit": "集成电路学院",
       "research_directions": [
@@ -1452,6 +1477,7 @@
     },
     {
       "name": "孙立涛",
+      "search_aliases": [],
       "title": "教授",
       "unit": "025-83790873",
       "research_directions": [
@@ -1543,6 +1569,7 @@
     },
     {
       "name": "徐峰",
+      "search_aliases": [],
       "title": "教授",
       "unit": "微机械系统教育部重点实验",
       "research_directions": [
@@ -1598,6 +1625,7 @@
     },
     {
       "name": "朱超",
+      "search_aliases": [],
       "title": "教授",
       "unit": "MEMS教育部重点实验室",
       "research_directions": [
@@ -1655,6 +1683,7 @@
     },
     {
       "name": "钟立",
+      "search_aliases": [],
       "title": "教授",
       "unit": "13456232948",
       "research_directions": [
@@ -1708,6 +1737,7 @@
     },
     {
       "name": "朱真",
+      "search_aliases": [],
       "title": "教授、研究员",
       "unit": "东南大学集成电路学院",
       "research_directions": [
@@ -1781,6 +1811,7 @@
     },
     {
       "name": "张鸣亮",
+      "search_aliases": [],
       "title": "教授",
       "unit": "电子科学与工程学院",
       "research_directions": [
@@ -1834,6 +1865,7 @@
     },
     {
       "name": "周再发",
+      "search_aliases": [],
       "title": "教授",
       "unit": "集成电路学院",
       "research_directions": [
@@ -1888,6 +1920,7 @@
     },
     {
       "name": "贺龙兵",
+      "search_aliases": [],
       "title": "教授",
       "unit": "MEMS教育部重点实验室",
       "research_directions": [
@@ -1962,6 +1995,7 @@
     },
     {
       "name": "韩磊",
+      "search_aliases": [],
       "title": "教授",
       "unit": "MEMS教育部重点实验室",
       "research_directions": [
@@ -2025,6 +2059,7 @@
     },
     {
       "name": "聂萌",
+      "search_aliases": [],
       "title": "教授，博导",
       "unit": "MEMS教育部重点实验室",
       "research_directions": [
@@ -2081,6 +2116,7 @@
     },
     {
       "name": "易真翔",
+      "search_aliases": [],
       "title": "教授/博导",
       "unit": "东南大学",
       "research_directions": [
@@ -2125,6 +2161,7 @@
     },
     {
       "name": "尹奎波",
+      "search_aliases": [],
       "title": "教授",
       "unit": "MEMS教育部重点实验室",
       "research_directions": [
@@ -2190,6 +2227,7 @@
     },
     {
       "name": "蔡浩",
+      "search_aliases": [],
       "title": "教授",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -2254,6 +2292,7 @@
     },
     {
       "name": "凌明",
+      "search_aliases": [],
       "title": "教授，博导",
       "unit": "国家专用集成电路系统工程技术研究中心",
       "research_directions": [
@@ -2310,6 +2349,7 @@
     },
     {
       "name": "丁德胜",
+      "search_aliases": [],
       "title": "教授、研究员",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -2345,6 +2385,7 @@
     },
     {
       "name": "方中元",
+      "search_aliases": [],
       "title": "教授",
       "unit": "fangzhongyuan@seu.edu.cn",
       "research_directions": [
@@ -2394,6 +2435,7 @@
     },
     {
       "name": "胡晨",
+      "search_aliases": [],
       "title": "教授、研究员",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -2436,6 +2478,7 @@
     },
     {
       "name": "李冰",
+      "search_aliases": [],
       "title": "教授、研究员",
       "unit": "东南大学集成电路学院",
       "research_directions": [
@@ -2471,6 +2514,7 @@
     },
     {
       "name": "李杰",
+      "search_aliases": [],
       "title": "教授、研究员",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -2513,6 +2557,7 @@
     },
     {
       "name": "刘斯扬",
+      "search_aliases": [],
       "title": "教授",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -2568,6 +2613,7 @@
     },
     {
       "name": "钱钦松",
+      "search_aliases": [],
       "title": "教授",
       "unit": "02583795811",
       "research_directions": [
@@ -2617,6 +2663,7 @@
     },
     {
       "name": "单伟伟",
+      "search_aliases": [],
       "title": "首席教授",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -2667,6 +2714,7 @@
     },
     {
       "name": "时龙兴",
+      "search_aliases": [],
       "title": "教授、研究员",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -2711,6 +2759,7 @@
     },
     {
       "name": "孙伟锋",
+      "search_aliases": [],
       "title": "教授",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -2792,6 +2841,7 @@
     },
     {
       "name": "吴建辉",
+      "search_aliases": [],
       "title": "教授、研究员",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -2842,6 +2892,7 @@
     },
     {
       "name": "徐申",
+      "search_aliases": [],
       "title": "教授",
       "unit": "东南大学",
       "research_directions": [
@@ -2900,6 +2951,7 @@
     },
     {
       "name": "杨军",
+      "search_aliases": [],
       "title": "教授、研究员",
       "unit": "国家集成电路设计自动化技术创新中心",
       "research_directions": [
@@ -2970,6 +3022,7 @@
     },
     {
       "name": "杨春",
+      "search_aliases": [],
       "title": "教授",
       "unit": "集成电路学院",
       "research_directions": [
@@ -3024,6 +3077,7 @@
     },
     {
       "name": "江哲",
+      "search_aliases": [],
       "title": "教授",
       "unit": "1991-08-26",
       "research_directions": [
@@ -3086,6 +3140,7 @@
     },
     {
       "name": "高筱锌",
+      "search_aliases": [],
       "title": "副研究员",
       "unit": "集成电路学院",
       "research_directions": [
@@ -3144,6 +3199,7 @@
     },
     {
       "name": "赖彭宇",
+      "search_aliases": [],
       "title": "副研究员",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -3200,6 +3256,7 @@
     },
     {
       "name": "李兴权",
+      "search_aliases": [],
       "title": "副研究员",
       "unit": "EDA国创中心",
       "research_directions": [
@@ -3246,6 +3303,7 @@
     },
     {
       "name": "吴玉潘",
+      "search_aliases": [],
       "title": "副教授",
       "unit": "集成电路学院",
       "research_directions": [
@@ -3309,6 +3367,7 @@
     },
     {
       "name": "施闰霄",
+      "search_aliases": [],
       "title": "副教授、副研究员",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -3371,6 +3430,7 @@
     },
     {
       "name": "朱彬武",
+      "search_aliases": [],
       "title": "副研究员",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -3428,6 +3488,7 @@
     },
     {
       "name": "符芷源",
+      "search_aliases": [],
       "title": "副教授、副研究员",
       "unit": "东南大学集成电路学院",
       "research_directions": [
@@ -3497,6 +3558,7 @@
     },
     {
       "name": "吴林东",
+      "search_aliases": [],
       "title": "副教授、副研究员",
       "unit": "东南大学集成电路学院",
       "research_directions": [
@@ -3547,6 +3609,7 @@
     },
     {
       "name": "陆光易",
+      "search_aliases": [],
       "title": "副教授/副研究员、硕士生导师",
       "unit": "集成电路学院 & EDA国创中心",
       "research_directions": [
@@ -3605,6 +3668,7 @@
     },
     {
       "name": "王翕",
+      "search_aliases": [],
       "title": "副教授",
       "unit": "xi.wang@seu.edu.cn",
       "research_directions": [
@@ -3667,6 +3731,7 @@
     },
     {
       "name": "史泰龙",
+      "search_aliases": [],
       "title": "副教授、副研究员、高工",
       "unit": "2024-10-26",
       "research_directions": [
@@ -3722,6 +3787,7 @@
     },
     {
       "name": "田茜",
+      "search_aliases": [],
       "title": "副教授",
       "unit": "集成电路学院",
       "research_directions": [
@@ -3764,6 +3830,7 @@
     },
     {
       "name": "陈洁",
+      "search_aliases": [],
       "title": "副教授",
       "unit": "83792632-8810",
       "research_directions": [
@@ -3814,6 +3881,9 @@
     },
     {
       "name": "国洪轩",
+      "search_aliases": [
+        "国宏轩"
+      ],
       "title": "副研究员",
       "unit": "+86-25-83792632-8817",
       "research_directions": [
@@ -3858,6 +3928,7 @@
     },
     {
       "name": "蒋明霞",
+      "search_aliases": [],
       "title": "高工",
       "unit": "025-8372632-8800",
       "research_directions": [
@@ -3893,6 +3964,7 @@
     },
     {
       "name": "雷双瑛",
+      "search_aliases": [],
       "title": "副教授",
       "unit": "MEMS教育部重点实验室",
       "research_directions": [
@@ -3944,6 +4016,7 @@
     },
     {
       "name": "吴建峰",
+      "search_aliases": [],
       "title": "副研究员，副高",
       "unit": "MEMS教育部重点实验室",
       "research_directions": [
@@ -4003,6 +4076,7 @@
     },
     {
       "name": "万能",
+      "search_aliases": [],
       "title": "副研究员",
       "unit": "025-83794642",
       "research_directions": [
@@ -4068,6 +4142,7 @@
     },
     {
       "name": "尹春燕",
+      "search_aliases": [],
       "title": "副教授",
       "unit": "MEMS教育部重点实验室",
       "research_directions": [
@@ -4119,6 +4194,7 @@
     },
     {
       "name": "洪华",
+      "search_aliases": [],
       "title": "副教授",
       "unit": "集成电路学院",
       "research_directions": [
@@ -4179,6 +4255,7 @@
     },
     {
       "name": "朱自然",
+      "search_aliases": [],
       "title": "青年首席教授",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -4237,6 +4314,7 @@
     },
     {
       "name": "卜爱国",
+      "search_aliases": [],
       "title": "副研究员",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -4281,6 +4359,7 @@
     },
     {
       "name": "曹鹏",
+      "search_aliases": [],
       "title": "副教授",
       "unit": "国家ASIC工程中心，EDA国创中心",
       "research_directions": [
@@ -4337,6 +4416,7 @@
     },
     {
       "name": "陈超",
+      "search_aliases": [],
       "title": "副教授、副研究员、高工",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -4386,6 +4466,7 @@
     },
     {
       "name": "刘波",
+      "search_aliases": [],
       "title": "副教授，博导",
       "unit": "集成电路学院",
       "research_directions": [
@@ -4441,6 +4522,7 @@
     },
     {
       "name": "刘新宁",
+      "search_aliases": [],
       "title": "副教授、副研究员、高工",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -4485,6 +4567,7 @@
     },
     {
       "name": "刘昊",
+      "search_aliases": [],
       "title": "副教授",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -4537,6 +4620,7 @@
     },
     {
       "name": "李泳佳",
+      "search_aliases": [],
       "title": "副教授、副研究员、高工",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -4586,6 +4670,7 @@
     },
     {
       "name": "齐志",
+      "search_aliases": [],
       "title": "副教授，副研究员，高工",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -4629,6 +4714,7 @@
     },
     {
       "name": "司鑫",
+      "search_aliases": [],
       "title": "青年首席教授",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -4674,6 +4760,7 @@
     },
     {
       "name": "王超",
+      "search_aliases": [],
       "title": "副研究员",
       "unit": "国家EDA创新中心",
       "research_directions": [
@@ -4735,6 +4822,7 @@
     },
     {
       "name": "王学香",
+      "search_aliases": [],
       "title": "副教授、副研究员、高工",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -4782,6 +4870,7 @@
     },
     {
       "name": "魏家行",
+      "search_aliases": [],
       "title": "副研究员",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -4826,6 +4915,7 @@
     },
     {
       "name": "吴汪然",
+      "search_aliases": [],
       "title": "副教授、博导",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -4881,6 +4971,7 @@
     },
     {
       "name": "闫浩",
+      "search_aliases": [],
       "title": "副教授，博导",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -4953,6 +5044,7 @@
     },
     {
       "name": "钟锐",
+      "search_aliases": [],
       "title": "副教授、副研究员、高工",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -4998,6 +5090,7 @@
     },
     {
       "name": "张龙",
+      "search_aliases": [],
       "title": "青年首席教授",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -5042,6 +5135,7 @@
     },
     {
       "name": "郑丽霞",
+      "search_aliases": [],
       "title": "副教授",
       "unit": "东南大学",
       "research_directions": [
@@ -5083,6 +5177,7 @@
     },
     {
       "name": "黄成",
+      "search_aliases": [],
       "title": "讲师、工程师",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -5118,6 +5213,7 @@
     },
     {
       "name": "黄少珉",
+      "search_aliases": [],
       "title": "上岗副研究员",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -5163,6 +5259,7 @@
     },
     {
       "name": "李红",
+      "search_aliases": [],
       "title": "讲师、工程师",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -5198,6 +5295,7 @@
     },
     {
       "name": "戚隆宁",
+      "search_aliases": [],
       "title": "讲师、工程师",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -5233,6 +5331,7 @@
     },
     {
       "name": "熊雨薇",
+      "search_aliases": [],
       "title": "工程师",
       "unit": "MEMS教育部重点实验室",
       "research_directions": [
@@ -5274,6 +5373,7 @@
     },
     {
       "name": "张倩",
+      "search_aliases": [],
       "title": "工程师",
       "unit": "83792632-8840",
       "research_directions": [
@@ -5309,6 +5409,7 @@
     },
     {
       "name": "赵霞",
+      "search_aliases": [],
       "title": "讲师",
       "unit": "0510-85111696",
       "research_directions": [
@@ -5344,6 +5445,7 @@
     },
     {
       "name": "陈明刚",
+      "search_aliases": [],
       "title": "博士后",
       "unit": "东南大学",
       "research_directions": [
@@ -5380,6 +5482,7 @@
     },
     {
       "name": "张笑敏",
+      "search_aliases": [],
       "title": "博士后",
       "unit": "东南大学",
       "research_directions": [
@@ -5429,6 +5532,7 @@
     },
     {
       "name": "刘琦",
+      "search_aliases": [],
       "title": "博士后",
       "unit": "东南大学集成电路学院",
       "research_directions": [
@@ -5464,6 +5568,7 @@
     },
     {
       "name": "李胜",
+      "search_aliases": [],
       "title": "博士后",
       "unit": "东南大学集成电路学院",
       "research_directions": [
@@ -5499,6 +5604,7 @@
     },
     {
       "name": "叶然",
+      "search_aliases": [],
       "title": "博士后",
       "unit": "东南大学集成电路学院",
       "research_directions": [
@@ -5534,6 +5640,7 @@
     },
     {
       "name": "马杰",
+      "search_aliases": [],
       "title": "博士后",
       "unit": "国家ASIC工程中心",
       "research_directions": [
@@ -5579,6 +5686,7 @@
     },
     {
       "name": "罗斌",
+      "search_aliases": [],
       "title": "博士后",
       "unit": "东南大学集成电路学院",
       "research_directions": [
@@ -5614,6 +5722,7 @@
     },
     {
       "name": "陈思静",
+      "search_aliases": [],
       "title": "博士后",
       "unit": "东南大学集成电路学院",
       "research_directions": [
