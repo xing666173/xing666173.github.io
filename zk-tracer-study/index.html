@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="ZK-Tracer 论文小白精读学习站点，支持章节导航和全文搜索。"
+    >
+    <title>ZK-Tracer 小白精读学习站</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="搜索与目录">
+        <header class="brand">
+          <p class="eyebrow">Paper Study</p>
+          <h1>ZK-Tracer 小白精读</h1>
+          <p class="subtitle">零基础术语、章节、公式、图表一站式检索</p>
+        </header>
+
+        <section class="search-panel" aria-label="全文搜索">
+          <label for="search">搜索讲义内容</label>
+          <div class="search-row">
+            <input
+              id="search"
+              type="search"
+              placeholder="例如 ZKP、PTU、1829x、模逆"
+              autocomplete="off"
+            >
+            <button id="clearSearch" type="button" title="清空搜索">清空</button>
+          </div>
+          <div class="meta-row">
+            <span id="resultCount">输入关键词开始搜索</span>
+            <span><b id="sectionCount">0</b> 节</span>
+            <span><b id="termCount">0</b> 个术语解释</span>
+          </div>
+          <div id="results" class="results" aria-live="polite"></div>
+        </section>
+
+        <section class="toc-panel" aria-label="章节目录">
+          <div class="panel-heading">
+            <h2>目录</h2>
+            <button id="expandToc" type="button" title="切换目录密度">密度</button>
+          </div>
+          <nav id="toc" class="toc"></nav>
+        </section>
+      </aside>
+
+      <main class="content">
+        <div class="content-top">
+          <div>
+            <p class="eyebrow">ZK-Tracer: zkVM Trace Generation</p>
+            <h2>交互式学习笔记</h2>
+          </div>
+          <a class="source-link" href="./notes.md" target="_blank" rel="noreferrer">查看 Markdown 原文</a>
+        </div>
+        <article id="article" class="article" aria-label="ZK-Tracer 精读讲义">
+          <section class="loading">
+            <h2>正在加载讲义...</h2>
+            <p>如果长时间没有内容，请确认站点目录中存在 <code>notes.md</code>。</p>
+          </section>
+        </article>
+      </main>
+    </div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
